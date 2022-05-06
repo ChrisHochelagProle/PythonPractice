@@ -3,7 +3,7 @@ nb_semaine = 0
 
 growth_index = 1.10
 
-while nb_lapin < 200:
+while nb_lapin <= 200:
     nb_lapin = nb_lapin * growth_index
     nb_semaine += 1
     #print(nb_lapin) # pour afficher chaque ittération.
