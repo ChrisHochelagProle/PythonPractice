@@ -12,7 +12,6 @@ tant que vrai faire
     fin si
     afficher "Le mot de passe est invalide"
 
-
 """
 
 # Solution 1
