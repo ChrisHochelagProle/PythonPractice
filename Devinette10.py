@@ -23,7 +23,7 @@ while not guess:
 """
 
 for compteur_essais in range(1, 7):
-    if compteur_essais == 6:
+    if compteur_essais == 6: # on veut donner 5 essais, en arrivant la 6e fois dans la loop c'est le cas.
         print("C'est assez! Vous avez essayer trop de fois.")
         break
     else:
