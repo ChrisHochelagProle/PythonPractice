@@ -1,4 +1,5 @@
 """Strings.
+https://github.com/Narcisse/learn-python/blob/master/src/data_types/test_strings.py
 @see: https://docs.python.org/3/tutorial/introduction.html
 @see: https://www.w3schools.com/python/python_strings.asp
 @see: https://www.w3schools.com/python/python_ref_string.asp
