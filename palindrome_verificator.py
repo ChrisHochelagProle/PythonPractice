@@ -22,15 +22,25 @@ afficher "Votre mot est un palindrome: ", is_palindrome, "."
 
 """
 
+
+def inverser(mot):
+    mot_renverser = ""
+    for compteur in range(1, len(mot) + 1):
+        mot_renverser += mot[len(mot) - compteur]
+    return mot_renverser
+
+
 mot_entrer = input("Entrer un palindrome: ")
 # on gere si lutilisateur met un majuscule quelque part en mettant tout lowercase
 mot_a_evaluer = mot_entrer.lower()
 is_palindrome = False
+"""
 mot_renverser = ""
 for compteur in range(1, len(mot_a_evaluer) + 1):
     mot_renverser += mot_a_evaluer[len(mot_a_evaluer) - compteur]
+"""
 
-if mot_a_evaluer == mot_renverser:
+if mot_a_evaluer == inverser(mot_a_evaluer):
     is_palindrome = True
 
 print("Votre mot est un palindrome?: ", is_palindrome)
