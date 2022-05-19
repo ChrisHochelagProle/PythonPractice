@@ -26,3 +26,4 @@ for lettre in mot:
         nombre_de_car_dans_mot += 1
 
 print("Il y a donc ", nombre_de_car_dans_mot, " fois le caractere ", caractere, "dans le mot: ", mot)
+
