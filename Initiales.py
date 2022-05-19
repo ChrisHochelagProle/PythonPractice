@@ -18,7 +18,7 @@ print("Vos initiales: " + initiales)
 
 # Version qui prend en compte les noms composes - A finir plus tard.
 # nom = input("Entrez votre nom: ")
-nom = "Christopher Desrosiers Mondor"
+nom = "Patrick Denver Troy Ground"
 initiales = ""
 """ Tests
 print(nom.find(" "))
@@ -29,16 +29,22 @@ nom = "Mondor"
 print(nom.find(" "))
 """
 
-# Ne fonctionne pas
-"""
-while nom.find(" ") != -1 or nom != "":
-    partie_analyse = nom[0:nom.find(" ")]
-    print(partie_analyse)
+# Code pour n<importe quel nom
+# On va couper a chaque espace donc on trouve combien il y a d<espace dans le nom
+nombre_espaces = nom.count(" ")
+# print(nombre_espaces)
+# on va isoler liniatiale de chaque mot en faisant laction x (nombre despaces) fois
+for compteur in range(nombre_espaces+1):
+    # tant quil y a des espaces
+    if compteur != nombre_espaces:
+        partie_analyse = nom[0:nom.find(" ")]
+    else:
+        partie_analyse = nom
+    # print(partie_analyse)
     initiale = partie_analyse[0]
     indice_prochain_nom = int(nom.find(" ")) + 1
     nom = nom[indice_prochain_nom:]
-    print(nom)
+    # print(nom)
     initiales += initiale
 
 print(initiales)
-"""
