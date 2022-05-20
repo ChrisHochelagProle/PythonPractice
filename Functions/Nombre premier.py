@@ -1,4 +1,8 @@
 # divisable par 1 et lui-meme
+# Dautres etudiant.e.s ont utiliser le fait quil faut quil y ait un maximum de 2 diviseur
+# implementer avec un compteur de diviseur
+# break quand plus grand que 2 pour optimiser.
+# crissement plus facile que mon code.
 def nombre_premier(nombre_donner):
     is_premier = True
     # cette condition fonctionne pour tous les nombres --
