@@ -18,17 +18,13 @@ nom_de_algorithme = os.path.basename(__file__)
 message_ouverture = 30 * "*" + f" Voici le resultat du programme: {nom_de_algorithme} " + 30 * "*"
 message_fermeture = 30 * "*" + f" Codé par {prenom} {nom} dans le cadre du cours {cours} " + 30 * "*"
 
-# Entrees
-mot_de_passe = input("Entrez un mot de passe: ")
-
-# Sorties
-
-# Mise en page
+# Message header
 
 print(message_ouverture)
 
 # Mettre le code sous ce commentaire
 
+mot_de_passe = input("Entrez un mot de passe: ")
 
 majuscule = False
 minuscule = False
@@ -36,9 +32,9 @@ chiffre = False
 different_debut_fin = False
 
 for lettre in mot_de_passe:
-    if lettre == lettre.upper():
+    if lettre.isupper():
         majuscule = True
-    if lettre == lettre.lower() and lettre.isnumeric() == False:
+    if lettre.islower():
         minuscule = True
     if lettre.isnumeric():
         chiffre = True
