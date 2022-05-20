@@ -25,5 +25,5 @@ def factorial(nombre):
     return result
 
 
-nombre = int(input("Entrez un nombre dont vous chercher le factoriel: "))
+nombre = int(input("Entrez un nombre dont vous chercher le factoriel entre 1 et 30: "))
 print(factorial(nombre))
