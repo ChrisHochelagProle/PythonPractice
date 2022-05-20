@@ -1,3 +1,4 @@
+# version remise
 mot_de_passe = input("Entrez un mot de passe: ")
 majuscule = False
 minuscule = False
