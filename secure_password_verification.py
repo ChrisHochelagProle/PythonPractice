@@ -19,6 +19,7 @@ message_ouverture = 30 * "*" + f" Voici le resultat du programme: {nom_de_algori
 message_fermeture = 30 * "*" + f" Codé par {prenom} {nom} dans le cadre du cours {cours} " + 30 * "*"
 
 # Entrees
+mot_de_passe = input("Entrez un mot de passe: ")
 
 # Sorties
 
@@ -28,7 +29,7 @@ print(message_ouverture)
 
 # Mettre le code sous ce commentaire
 
-mot_de_passe = input("Entrez un mot de passe: ")
+
 majuscule = False
 minuscule = False
 chiffre = False
