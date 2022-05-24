@@ -1,7 +1,7 @@
 
 
 def ligneCar(n, ch):
-    print(ch*n)
+    return ch*n
 
 
-ligneCar(20, "*")
+print(ligneCar(20, "*"))
