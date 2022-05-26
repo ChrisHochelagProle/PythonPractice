@@ -10,4 +10,4 @@ def create_login(nom, prenom, taille1, taille2):
     return nom[:taille1]+prenom[:taille2]
 
 
-print("Le login recommande est:", create_login("Christo", "Mondor", 3, 2))
+print("Le login recommande est:", create_login("Christo", "Mondor", 4, 2))
