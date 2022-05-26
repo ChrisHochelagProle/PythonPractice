@@ -5,6 +5,7 @@ caracteres de nom et le deuxieme pour isoler les Y premier caracteres de prenom.
 Le resultat est une concatenation de ces deux chaines.
 """
 
+
 def create_login(nom, prenom, taille1, taille2):
     return nom[:taille1]+prenom[:taille2]
 
