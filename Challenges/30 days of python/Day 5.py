@@ -52,21 +52,21 @@ Tricks
             orange_and_mango = fruits[-3:-1] # it does not include the last index,['orange', 'mango']
             orange_mango_lemon = fruits[-3:] # this will give starting from -3 to the end,['orange', 'mango', 'lemon']
             reverse_fruits = fruits[::-1] # a negative step will take the list in reverse order,['lemon', 'mango', 'orange', 'banana']
-        Modify a list
-            List are mutable and ordered. You can change any value of a given
-            index for something else.
-            list[0] = 'chevre'
-            list[0] = 'dragon'
-        Checking for items in a list
-            fruits = ['banana', 'orange', 'mango', 'lemon']
-            does_exist = 'banana' in fruits
-            assert does_exist = True # yep
-        Deleting
-            del liste --> delete the whole list
-            del liste[index] --> removes item of specified index
-            del liste[slicing ranges like 1:3] --> removes items in range
-        Joining lists
-            Using the operator + we can join lists
+    Modify a list
+        List are mutable and ordered. You can change any value of a given
+        index for something else.
+        list[0] = 'chevre'
+        list[0] = 'dragon'
+    Checking for items in a list
+        fruits = ['banana', 'orange', 'mango', 'lemon']
+        does_exist = 'banana' in fruits
+        assert does_exist = True # yep
+    Deleting
+        del liste --> delete the whole list
+        del liste[index] --> removes item of specified index
+        del liste[slicing ranges like 1:3] --> removes items in range
+    Joining lists
+        Using the operator + we can join lists
 """
 
 """
