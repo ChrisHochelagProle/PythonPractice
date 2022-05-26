@@ -35,6 +35,12 @@ def inverser(mot):
     return mot_renverser
 
 
+def isPalindrome(mot):
+    if mot == inverser(mot):
+        return True
+    else:
+        return False
+
 # Informations generales pour mise en page
 
 cours = "Concepts de programmation 1"
@@ -61,17 +67,14 @@ print(message_ouverture)
 mot_entrer = input("Entrer un palindrome: ")
 # on gere si lutilisateur met un majuscule quelque part en mettant tout lowercase
 mot_a_evaluer = mot_entrer.lower()
-is_palindrome = False
+
 """
 mot_renverser = ""
 for compteur in range(1, len(mot_a_evaluer) + 1):
     mot_renverser += mot_a_evaluer[len(mot_a_evaluer) - compteur]
 """
 
-if mot_a_evaluer == inverser(mot_a_evaluer):
-    is_palindrome = True
-
-print("Votre mot est un palindrome?: ", is_palindrome)
+print("Votre mot est un palindrome?: ", isPalindrome(mot_a_evaluer))
 
 
 # Message footer
