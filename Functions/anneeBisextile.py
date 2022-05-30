@@ -5,9 +5,10 @@ def bissextile(annee):
         return False
 
 
-annee = int(input("Donnez une annee: "))
-biss = bissextile(annee)
-if biss:
-    print("Annee: ", annee, "est bissextile!")
-else:
-    print("Annee: ", annee, "n'est pas bissextile!")
+# annee = int(input("Donnez une annee: "))
+for annee in range(1, 2023):
+    biss = bissextile(annee)
+    if biss:
+        print("Annee: ", annee, "est bissextile!")
+    else:
+        print("Annee: ", annee, "n'est pas bissextile!")
