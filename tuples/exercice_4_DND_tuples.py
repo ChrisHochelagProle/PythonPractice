@@ -3,7 +3,7 @@ def force_faiblesse(personnage):
     faiblesses = ()
     for skill in personnage:
         active_skill_score = skill[-1]
-        if int(active_skill_score) < 15:
+        if int(active_skill_score) < 13:
             faiblesses += skill
         else:
             forces += skill
