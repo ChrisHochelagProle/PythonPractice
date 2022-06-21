@@ -6,7 +6,7 @@ def java_mastery(etudiants):
                 java += 1
     return java
 
-
+# Dont like this code a little bit... but it works
 def language_mastery(etudiants):
     java = ["Java", 0]
     c_sharp = ["C#", 0]
