@@ -14,11 +14,11 @@ employes = e1, e2, e3
 def create_dict_of_speaking_language(employees):
     dict_langues = {}
     for workers in employees:
-        for info in workers[1:]:
-            if info not in dict_langues:
-                dict_langues[info] = 1
+        for langue in workers[1:]:
+            if langue not in dict_langues:
+                dict_langues[langue] = 1
             else:
-                dict_langues[info] += 1
+                dict_langues[langue] += 1
     return dict_langues
 
 
