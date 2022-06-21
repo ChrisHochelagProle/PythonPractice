@@ -11,6 +11,4 @@ def add_in_order(number, ordered_liste):
 
 ordered_list = [14, 50, 100, 125, 500]
 
-
-
 print(add_in_order(510, ordered_list))
