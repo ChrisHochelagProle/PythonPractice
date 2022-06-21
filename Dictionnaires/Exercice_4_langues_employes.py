@@ -23,7 +23,13 @@ def create_dict_of_speaking_language(employees):
 
 
 dict_langue = create_dict_of_speaking_language(employes)
+# Voir le contenu et comprendre key/value pairs
+print(dict_langue)
 print("Nous pouvons vous servir dans les langues suivantes: ")
 for langue in dict_langue.keys():
     print(langue, end=" ")
+# Ci-dessous la fonction max nous offre la possibilite de lui donner un objet iterable comme une liste ou un dictionnaire
+# et de recevoir la plus grande valeur. Rappelez vous que dans dict on a des key\value pair et donc max cherche
+# seulement dans les values. Ici c'est parfait car les valeurs ont ete augmentees a chaque fois qu'une personne
+# parlait la langue et on cherche la langue la plus parler.
 print("\nLa langue la plus parler par les employes: ", max(dict_langue, key=dict_langue.get))
