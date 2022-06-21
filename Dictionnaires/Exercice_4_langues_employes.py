@@ -23,5 +23,7 @@ def create_dict_of_speaking_language(employees):
 
 
 dict_langue = create_dict_of_speaking_language(employes)
-print(dict_langue)
-print("La langue la plus parler par les employes: ", max(dict_langue, key=dict_langue.get))
+print("Nous pouvons vous servir dans les langues suivantes: ")
+for langue in dict_langue.keys():
+    print(langue, end=" ")
+print("\nLa langue la plus parler par les employes: ", max(dict_langue, key=dict_langue.get))
