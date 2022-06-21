@@ -3,7 +3,7 @@ def recette_mult(ingredients, multi):
     for ingredient in ingredients:
         active = list(ingredient)
         active[1] = active[1] * 2
-        liste_ingredients.append(active)
+        liste_ingredients.append(tuple(active))
     return tuple(liste_ingredients)
 
 
