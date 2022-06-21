@@ -31,5 +31,7 @@ for langue in dict_langue.keys():
 # Ci-dessous la fonction max nous offre la possibilite de lui donner un objet iterable comme une liste ou un dictionnaire
 # et de recevoir la plus grande valeur. Rappelez vous que dans dict on a des key\value pair et donc max cherche
 # seulement dans les values. Ici c'est parfait car les valeurs ont ete augmentees a chaque fois qu'une personne
-# parlait la langue et on cherche la langue la plus parler.
+# parlait la langue et on cherche la langue la plus parler. il faut egalement donner une clee pour aller chercher
+# les valeurs
+print("\n", dict_langue.get("français"))
 print("\nLa langue la plus parler par les employes: ", max(dict_langue, key=dict_langue.get))
