@@ -1,4 +1,4 @@
-def mots_avec_voyelles(chaine):
+def mots_avec_deux_voyelles(chaine):
     list_voyelle = ["a", "e", "i", "o", "u", "y"]
     liste_mots = chaine.lower().split()
     liste_mots_voyelles = []
@@ -13,6 +13,5 @@ def mots_avec_voyelles(chaine):
     return liste_mots_voyelles
 
 
-
 chaine_char = "Python est un language de programmation de haut niveau."
-print(mots_avec_voyelles(chaine_char))
+print(mots_avec_deux_voyelles(chaine_char))
