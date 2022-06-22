@@ -24,7 +24,7 @@ def create_dict_of_speaking_language(employees):
 
 dict_langue = create_dict_of_speaking_language(employes)
 # Voir le contenu et comprendre key/value pairs
-print(dict_langue)
+# print(dict_langue)
 print("Nous pouvons vous servir dans les langues suivantes: ")
 for langue in dict_langue.keys():
     print(langue, end=" ")
@@ -33,5 +33,5 @@ for langue in dict_langue.keys():
 # seulement dans les values. Ici c'est parfait car les valeurs ont ete augmentees a chaque fois qu'une personne
 # parlait la langue et on cherche la langue la plus parler. il faut egalement donner une clee pour aller chercher
 # les valeurs
-print("\n", dict_langue.get("français"))
+# print("\n", dict_langue.get("français"))
 print("\nLa langue la plus parler par les employes: ", max(dict_langue, key=dict_langue.get))
