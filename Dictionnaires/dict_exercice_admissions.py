@@ -18,7 +18,7 @@
 #             dict_non_admis[key] = value
 #     return dict_admis, dict_non_admis
 
-def admissions_studemt_note(dict_etudiants):
+def admissions_student_note(dict_etudiants):
     dict_admis = {}
     dict_non_admis = {}
     for etudiant, note in dict_etudiants.items():
@@ -32,7 +32,7 @@ etudiants = {"etudiant_1": 13, "etudiant_2": 17, "etudiant_3": 2, "etudiant_4": 
              "etudiant_6": 17, "etudiant_7": 5, "etudiant_8": 17, "etudiant_9": 8, "etudiant_10": 17,
              "etudiant_11": 9, "etudiant_12": 17}
 
-tuple_of_dict_admissions = admissions_studemt_note(etudiants)
+tuple_of_dict_admissions = admissions_student_note(etudiants)
 
 print("Les eleves admis:", tuple_of_dict_admissions[0], "\n")
 print("Les eleces non admis:", tuple_of_dict_admissions[1])
