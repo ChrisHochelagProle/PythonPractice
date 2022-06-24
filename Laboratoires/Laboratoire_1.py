@@ -9,32 +9,43 @@ def separateur(str, separateur):
     list_separe = []
     swap_word = ""
     longueur_str = longueur(str)
-    for i in range(longueur_str):
-        if str[i] == separateur:
+    for index in range(longueur_str):
+        if str[index] == separateur:
             list_separe.append(swap_word)
             swap_word = ""
         else:
-            swap_word += str[i]
-        if i == longueur_str - 1:
+            swap_word += str[index]
+        if index == longueur_str - 1:
             list_separe.append(swap_word)
 
     return list_separe
 
 
 def remplacer(str, original, remplacement):
-    swap_word = ""
-    liste_mot = str.split()
-    longueur_original = longueur(original)
-    for mot in liste_mot:
-        longueur_chaine = longueur(mot)
+    len_original = longueur(original)
+    str_copy = str
+    new_str = ""
+    while str_copy != "":
+        len_str = longueur(str_copy)
+        if len_str < len_original:
+            new_str += str_copy
+            str_copy = ""
+            break
+        for index in range(len_str):
+            if str_copy[index:index+len_original] == original:
+                new_str += str_copy[0:index] + remplacement
+                str_copy = str_copy[index+len_original:longueur(str_copy)]
+                break
+    return new_str
 
-        for i in range(longueur_original):
+# Execution de la fonction longueur()
+str_welcome = "Welcome"
+print(longueur(str_welcome))
 
+# Execution de la fonction separateur()
+str_separateur = "Welcome-tout-le-monde"
+print(separateur(str_separateur, "-"))
 
-
-    return
-
-
-print(longueur("Welcome"))
-print(separateur("Welcome-to-world", "-"))
-print(separateur("Mon nom est Bond, James Bond.", " "))
+# Execution de la fonction remplacer.
+str_test = "Mon nom est Bond, James Bond."
+print(remplacer(str_test, "Bond", "Tuche"))
