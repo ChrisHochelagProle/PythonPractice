@@ -34,7 +34,9 @@ assert facon_avec_lambda_plus_ou_moins_100 == [-90, -97, -96, 94, 50]  # True
 
 # Retourner une liste avec la taille de chaque mot
 liste_de_tailles_des_mots = list(map(taille_des_mots, liste_de_chaines))
+liste_de_tailles_des_mots_2 = list(map(len, liste_de_chaines))
 assert liste_de_tailles_des_mots == [5, 4, 6, 6, 9, 5]  # True
+assert liste_de_tailles_des_mots_2 == [5, 4, 6, 6, 9, 5]  # True
 
 # Retourner une liste de racines carree des nombres
 liste_racines = list(map(racines_carree, liste_de_nombre))
