@@ -1,3 +1,5 @@
+# Exercices serie 10
+
 from math import sqrt
 
 liste_de_nombre = [10, 3, 4, -6, -50]
