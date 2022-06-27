@@ -104,3 +104,9 @@ liste1 = ["420-2C3", "345-1F3"]
 # une liste trier selon la fonction donnee
 liste2 = list(sorted(liste1, key=f_sous_chaine))
 assert liste2 == ['345-1F3', '420-2C3']  # True
+
+# Un autre exemple en voulant trier pa rla longueur des mots
+f_longueur_mots = lambda chaine : len(chaine)
+liste1 = ["dos", "automobile", "chat", "vélo", "brachiosaure"]
+liste2 = list(sorted(liste1, key=f_longueur_mots))
+assert liste2 == ['dos', 'chat', 'vélo', 'automobile', 'brachiosaure']  # True
