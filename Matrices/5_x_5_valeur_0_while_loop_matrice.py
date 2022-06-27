@@ -9,4 +9,5 @@ while ligne < 5:
     matrice.append(liste)
     ligne += 1
 
-print(matrice)
+for liste in matrice:
+    print(liste)
