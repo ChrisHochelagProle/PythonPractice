@@ -1,7 +1,7 @@
 positif = lambda nombre : nombre > 0
 pair_positif = lambda nombre : nombre > 0 and nombre % 2 == 0
 pas_multiple_dix = lambda nombre : not nombre % 10 == 0
-commence_par_a = lambda chaine : chaine[0].upper() == "A"
+commence_par_a = lambda chaine : chaine[0] in "Aa"
 contient_pas_x = lambda chaine : not "x" in chaine
 
 liste_de_nombre = [10, 3, 4, -6, -50]
