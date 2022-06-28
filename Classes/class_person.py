@@ -15,8 +15,14 @@ class Person:
     def vieillir(self):
         self.age += 1
 
+    # Si on defini __str__(self) on peut ensuite simplement print(notre_objet) et avoir acces a ses proprietes
+    def __str__(self):
+        return f'Nom: {self.name} - Age: {self.age} - Taille: {self.height} - Adresse: {self.adress}'
+
 
 christo = Person("Christopher Desrosiers Mondor", 26, 1.92, "Hochelaga")
 christo.info()
 christo.vieillir()
 christo.info()
+# Si on defini __str__(self) on peut ensuite simplement print(notre_objet) et avoir acces a ses proprietes
+print(christo)
