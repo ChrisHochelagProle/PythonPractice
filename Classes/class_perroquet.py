@@ -1,4 +1,5 @@
 class Perroquet:
+    # voir class person
 
     def __init__(self, nom, age):
         self.nom = nom
