@@ -2,6 +2,7 @@ class Person:
     # avec les : suivant les parametres dinitialisation on offre un reference qui saffichera comme aide memoire
     # lors de la creation des instances de lobjet comme ca on pourra savoir quoi donner comme parametre sans voir
     # la classe et l'utilisation quelle fait des parametres.
+
     def __init__(self, nom: str, age: int, taille: float, adresse: str):
         self.name = nom
         self.age = age
