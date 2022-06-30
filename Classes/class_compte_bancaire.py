@@ -1,6 +1,6 @@
 class Compte:
-    def __init__(self):
-        self.solde = 0
+    def __init__(self, solde: float):
+        self.solde = solde
 
     def __str__(self):
         return f'Objet de type {self.__class__} contenant Solde: {self.solde}'
@@ -22,7 +22,7 @@ class Compte:
 
 list_comptes = []
 for i in range(4):
-    compte = Compte()
+    compte = Compte(0)
     depot = float(input("Combien voulez-vous mettre dans le compte: "))
     compte.depot(depot)
     list_comptes.append(compte)
