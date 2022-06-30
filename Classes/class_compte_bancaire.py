@@ -17,6 +17,9 @@ class Compte:
         else:
             print("Montant invalide")
 
+    def affichage_etat_de_compte(self):
+        print(f'[{self.solde}$]')
+
 list_comptes = []
 for i in range(4):
     compte = Compte()
@@ -42,3 +45,4 @@ print("Compte de plus de 30k:", nombre_30k)
 print("Compte de moins de 20k:", nombre_20k)
 
 print(list_comptes[0])
+list_comptes[0].affichage_etat_de_compte()
