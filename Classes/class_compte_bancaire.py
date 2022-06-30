@@ -3,7 +3,7 @@ class Compte:
         self.solde = 0
 
     def __str__(self):
-        return f'Solde: {self.solde}'
+        return f'Objet de type {self.__class__} contenant Solde: {self.solde}'
 
     def depot(self, montant: float):
         if montant > 0:
@@ -40,3 +40,5 @@ nombre_20k = len(list(filter(lesser_20k, list_soldes)))
 print("La moyenne des soldes des comptes dans notre banque", moyenne, "$")
 print("Compte de plus de 30k:", nombre_30k)
 print("Compte de moins de 20k:", nombre_20k)
+
+print(list_comptes[0])
