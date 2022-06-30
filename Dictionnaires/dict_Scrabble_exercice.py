@@ -4,3 +4,10 @@ scrabble={"A":1,"B":3,"C":3,"D":2,"E":1,"F":4,"G":2,"H":4,"I":1,"J":8,"K":10,"L"
 
 # Chaque joueur utilise ses jetons (un jeton contient une seule lettre) pour former un mot.
 # Écrivez un programme qui lit un mot saisi par l'utilisateur et affiche la valeur de ce mot en scrabble.
+
+mot = input("Entrez un mot que vous voulez jouer au scrabble: ")
+score = 0
+for lettre in mot:
+    score += scrabble[lettre.upper()]
+
+print(f'Votre score est {score} points!')
