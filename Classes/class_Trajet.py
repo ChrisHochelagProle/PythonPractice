@@ -6,7 +6,7 @@ class Trajet:
         self.villeArriver = villeArriver
         self.nbPassagers = nbPassagers
         self.kmParcourus = 0
-        
+
     def avance(self, kilometresAdditionnels: int):
         self.kmParcourus += kilometresAdditionnels
 
