@@ -47,3 +47,28 @@ assert liste_racines == [3.1622776601683795, 1.7320508075688772, 2.0, 'Cant squa
 # 0 = a et ainsi de suite
 liste_lettre_au_lieu_de_chiffre = list(map(lettre_au_lieu_de_chiffre, liste_nombre_0_a_25))
 assert liste_lettre_au_lieu_de_chiffre == ['a', 'c', 'e']  # True
+
+# Code par Maddie
+import math
+
+add_or_substract_100 = lambda x : x-100 if x < 0 else x+100
+word_len = lambda s : len(s)
+# Malade son idee pour renvoyer une lettre selon un nombre dans la longueur de l'alphabet
+alphabet = lambda n : "a b c d e f g h i j k l m n o p q r s t u v w x y z".split(" ")[n]
+
+num_list = [-10, 20, -2, -65, 12, 26]
+num_list_2 = [2, 10, 55, 24, 66, 70, 32, 23, 51]
+word_list = ["maison", "bague", "livre", "un", "terminaison"]
+int_char_list = [0, 21, 13, 5, 8, 12, 25]
+
+print(list(map(add_or_substract_100, num_list)))
+print(list(map(math.sqrt, num_list_2)))
+print(list(map(word_len, word_list)))
+print(list(map(alphabet, int_char_list)))
+
+#output:
+# [-110, 120, -102, -165, 112, 126]
+# [1.4142135623730951, 3.1622776601683795, 7.416198487095663, 4.898979485566356, 8.12403840463596,
+# 8.366600265340756, 5.656854249492381, 4.795831523312719, 7.14142842854285]
+# [6, 5, 5, 2, 11]
+# ['a', 'v', 'n', 'f', 'i', 'm', 'z']
