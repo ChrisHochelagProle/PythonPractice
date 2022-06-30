@@ -18,7 +18,7 @@ class Compte:
             print("Montant invalide")
 
 list_comptes = []
-for i in range(10):
+for i in range(4):
     compte = Compte()
     depot = float(input("Combien voulez-vous mettre dans le compte: "))
     compte.depot(depot)
