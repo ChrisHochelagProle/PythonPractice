@@ -38,7 +38,7 @@ while i < 3:
 
 m.additionner(m2)
 m.afficher()
-'''
+
 # Tester la multiplication
 m.multiplier(2)
 m.afficher()
@@ -57,4 +57,3 @@ while i < 3:
     i+=1
 
 print("Terminé.")
-'''
