@@ -3,6 +3,7 @@
 #         Enfant
 # Encapsulation
 #     Public
-#         prive
+#         protegee
+#             prive
 # Polymorphisme
 #     Fonctions qui agissent differemment selon les parametres des instances
