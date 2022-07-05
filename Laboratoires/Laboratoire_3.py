@@ -22,7 +22,7 @@ class Chaine:
                 list_separe.append(swap_word)
         return list_separe
 
-    def remplacer(self, original, remplacement):
+    def remplacer(self, original: str, remplacement: str):
         len_original = Chaine(original).longueur()
         str_copy = Chaine(self.__mot)
         new_str = ""
