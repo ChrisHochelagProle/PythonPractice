@@ -43,8 +43,8 @@ str_welcome = "Welcome"
 print(longueur(str_welcome))
 
 # Execution de la fonction separateur()
-str_separateur = "Welcome-tout-le-monde"
-print(separateur(str_separateur, "-"))
+str_separateur = "Welcome:tout:le:monde"
+print(separateur(str_separateur, ":"))
 
 # Execution de la fonction remplacer.
 str_test = "juliette et sa soeur juliette sont soeur depuis que Bond a rencontrer tuche."
