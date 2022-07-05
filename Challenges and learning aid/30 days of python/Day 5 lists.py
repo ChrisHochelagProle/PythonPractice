@@ -1,5 +1,5 @@
 """
-Notes
+Notes Programmation oriente objet.py
 Create a list
     liste = list() # builtin function
     liste = [] # using square brackets
