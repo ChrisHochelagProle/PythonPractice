@@ -27,7 +27,7 @@ def remplacer(str, original, remplacement):
     new_str = ""
     while str_copy != "":
         len_str = longueur(str_copy)
-        if len_str < len_original:
+        if original not in str_copy:
             new_str += str_copy
             str_copy = ""
             break
@@ -47,5 +47,5 @@ str_separateur = "Welcome-tout-le-monde"
 print(separateur(str_separateur, "-"))
 
 # Execution de la fonction remplacer.
-str_test = "Mon nom est Bond, James Bond."
-print(remplacer(str_test, "Bond", "Tuche"))
+str_test = "juliette et sa soeur juliette sont soeur depuis que Bond a rencontrer tuche."
+print(remplacer(str_test, "soeur", "amies"))
