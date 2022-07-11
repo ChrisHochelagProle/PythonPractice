@@ -69,3 +69,38 @@ while True:
         print(diagramme)
         print("Merci d'avoir utiliser UML_GEN_0.1.")
         break
+
+# Entrez le nom de votre classe:
+# Senseur
+# Entrez un attribut de classe (ou rien pour passer aux methodes):
+# + connecte: bool
+# Entrez un attribut de classe (ou rien pour passer aux methodes):
+# + pression: float
+# Entrez un attribut de classe (ou rien pour passer aux methodes):
+# + humidite: float
+# Entrez un attribut de classe (ou rien pour passer aux methodes):
+# + temperature: int
+# Entrez un attribut de classe (ou rien pour passer aux methodes):
+#
+# Entrez une methode de la classe (ou rien pour terminer):
+# + demarrer()
+# Entrez une methode de la classe (ou rien pour terminer):
+# + lireValeurs(): dict
+# Entrez une methode de la classe (ou rien pour terminer):
+#
+# Voulez vous recommencer? (o/n):
+# n
+# | ********************* |
+# | Senseur               |
+# | ********************* |
+# | + humidite: float     |
+# | + pression: float     |
+# | + temperature: int    |
+# | +connecte: bool       |
+# | ********************* |
+# | + demarrer()          |
+# | + lireValeurs(): dict |
+# | ********************* |
+# Merci d'avoir utiliser UML_GEN_0.1.
+#
+# Process finished with exit code 0
