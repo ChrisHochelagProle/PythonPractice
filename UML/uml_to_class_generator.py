@@ -57,11 +57,33 @@ uml = f'| ************** |\n' \
 # generator = ClassGenerator(uml)
 # print(generator.generateClass())
 
-# lines_in_uml = uml.split("\n")
-# print(lines_in_uml)
-# lines_without_bars = []
-# for line in lines_in_uml:
-#     lines_without_bars.append(line.strip("|"))
-# print(lines_without_bars)
-# for line in lines_without_bars:
-#     for char in range(len(line)):
+lines_in_uml = uml.split("\n")
+print(lines_in_uml)
+lines_without_bars = []
+for line in lines_in_uml:
+    lines_without_bars.append(line.strip("|"))
+print(lines_without_bars)
+compteur_separations = 0
+nom_de_classe = ""
+list_attribut = []
+for line in lines_without_bars:
+    private = False
+    nom_attribut = ""
+    type_attribut = ""
+    if "*" in line:
+        compteur_separations += 1
+        continue
+    if compteur_separations == 1:
+        pass
+        nom_de_classe = line.strip(" ")
+    elif compteur_separations == 2:
+        if "-" in line:
+            private = True
+        elif "+" in line:
+            private = False
+
+    elif compteur_separations == 3:
+        pass
+    else:
+        break
+print(nom_de_classe)
