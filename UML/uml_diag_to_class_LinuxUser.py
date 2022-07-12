@@ -1,3 +1,19 @@
+# diagramme
+# | ********************** |
+# | UtilisateurLinux       |
+# | ********************** |
+# | + UID: str             |
+# | + identifiant: str     |
+# | + membreDe: str[]      |
+# | + repertoirePerso: str |
+# | ********************** |
+# | + ajouterGroupe(str)   |
+# | + connecter()          |
+# | + deconnecter()        |
+# | + getUID(): str        |
+# | + supprimerGroupe(str) |
+# | ********************** |
+
 class UtilisateurLinux:
     def __init__(self, id: str, uid: str, home_dir: str, list_groups: list):
         self.identifiant = id
