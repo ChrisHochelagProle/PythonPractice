@@ -52,7 +52,7 @@ print(pays_1.get_superficie())
 
 # 3 Parce que nouveau ne renvoie rien et on n<affecte rien a p1 donc reste original
 def nouveau(p) :
-	P=Pays(0,0)
+    P=Pays(0,0)
 
 p1=Pays(10000,5000)
 nouveau(p1)
