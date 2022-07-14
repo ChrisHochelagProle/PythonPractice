@@ -9,3 +9,4 @@ class Dictionnaire(Livre):
 
 d = Dictionnaire()
 print(isinstance(d, Media))
+
