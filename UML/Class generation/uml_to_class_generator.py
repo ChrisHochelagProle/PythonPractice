@@ -68,7 +68,7 @@ class ClassGenerator:
                 nom_pre_edit = list_nom_et_type[0]
                 retour_pre_edit = list_nom_et_type[1]
                 nom_methode = returnAlpha(nom_pre_edit)
-                type_retour = returnAlpha(type_pre_edit)
+                type_retour = returnAlpha(retour_pre_edit)
                 methode = Methode(private, nom_methode, type_retour)
                 methodes.append(methode)
             else:
@@ -82,7 +82,8 @@ class ClassGenerator:
         methode_text = ""
         for method in methodes:
             methode_text += f"def {method.nom}(self):\n    " \
-                            f"    pass"
+                            f"    {method.retour}_result = ''\n    " \
+                            f"    return string"
         class_body = f"class {nom_de_classe}:\n" \
                 f"    def __init__(self):\n" \
                 f"    {attributs_text}\n" \
@@ -96,10 +97,11 @@ uml = f'| ************** |\n' \
       f'| Ville          |\n' \
       f'| ************** |\n' \
       f'| - nom: str     |\n' \
-      f'| + pays: Pays   |\n' \
+      f'| - pays: Pays   |\n' \
       f'| - pop: int     |\n' \
       f'| ************** |\n' \
       f'| + infos(): str |\n' \
+      f'| + afficher()   |\n' \
       f'| ************** |\n'
 
 generator = ClassGenerator(uml)
