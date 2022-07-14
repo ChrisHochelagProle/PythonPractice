@@ -64,6 +64,7 @@ class ClassGenerator:
                     private = True
                 elif "+" in line:
                     private = False
+                # ajouter condition / refaire pour si il y a pas un type de retour
                 list_nom_et_type = line.split(":")
                 nom_pre_edit = list_nom_et_type[0]
                 retour_pre_edit = list_nom_et_type[1]
