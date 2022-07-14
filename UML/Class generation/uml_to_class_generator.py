@@ -2,6 +2,7 @@ from ClassMain import *
 from ClassMethod import *
 from ClassAttribut import *
 from ClassGenUtils import *
+from uml_generator import *
 
 class ClassGenerator:
     def __init__(self, uml: str):
@@ -35,17 +36,19 @@ class ClassGenerator:
 
         return class_body
 
-
-uml = f'| ************** |\n' \
-      f'| Ville          |\n' \
-      f'| ************** |\n' \
-      f'| - nom: str     |\n' \
-      f'| - pays: Pays   |\n' \
-      f'| - pop: int     |\n' \
-      f'| ************** |\n' \
-      f'| + infos(): str |\n' \
-      f'| + afficher()   |\n' \
-      f'| ************** |\n'
+# exemple
+# | ********************* |
+# | Senseur               |
+# | ********************* |
+# | + humidite: float     |
+# | + pression: float     |
+# | + temperature: int    |
+# | + connecte: bool      |
+# | ********************* |
+# | + demarrer()          |
+# | + lireValeurs(): dict |
+# | ********************* |
+uml = generateUML()
 
 generator = ClassGenerator(uml)
 print(generator.generateClass())
