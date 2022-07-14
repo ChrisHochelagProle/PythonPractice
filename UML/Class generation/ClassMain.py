@@ -3,10 +3,10 @@ from ClassAttribut import *
 
 
 class aClass:
-    def __init__(self):
-        self.name = ""
-        self.methods = []
-        self.attributs = []
+    def __init__(self, umlUnformatted: dict):
+        self.name = umlUnformatted["nom"]
+        self.methods = umlUnformatted["methodes"]
+        self.attributs = umlUnformatted["attributs"]
 
     def setName(self, nom: str):
         self.name = nom

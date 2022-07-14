@@ -1,95 +1,37 @@
-def returnAlpha(string: str):
-    result = ""
-    for char in string:
-        if char.isalpha():
-            result += char
-    return result
-
-class Attribut:
-    def __init__(self, security, name, typeOf):
-        self.private = security
-        self.nom = name
-        self.type = typeOf
-
-    def afficher(self):
-        return (self.nom, self.private, self.type)
-class Methode:
-    def __init__(self, security, name, retourOf):
-        self.private = security
-        self.nom = name
-        self.retour = retourOf
-
-    def afficher(self):
-        return (self.nom, self.private, self.retour)
+from ClassMain import *
+from ClassMethod import *
+from ClassAttribut import *
+from ClassGenUtils import *
 
 class ClassGenerator:
     def __init__(self, uml: str):
         self.uml_diagram = uml
 
     def generateClass(self):
-        nom_de_classe = ""
-        lines_in_uml = self.uml_diagram.split("\n")
-        lines_without_bars = []
-        for line in lines_in_uml:
-            lines_without_bars.append(line.strip("|"))
-        compteur_separations = 0
-        attributs = []
-        methodes = []
-        for line in lines_without_bars:
-            private = False
-            nom_attribut = ""
-            type_attribut = ""
-            nom_methode = ""
-            type_retour = ""
-            if "*" in line:
-                compteur_separations += 1
-                continue
-            if compteur_separations == 1:
-                pass
-                nom_de_classe = line.strip(" ")
-            elif compteur_separations == 2:
-                if "-" in line:
-                    private = True
-                elif "+" in line:
-                    private = False
-                list_nom_et_type = line.split(":")
-                nom_pre_edit = list_nom_et_type[0]
-                type_pre_edit = list_nom_et_type[1]
-                nom_attribut = returnAlpha(nom_pre_edit)
-                type_attribut = returnAlpha(type_pre_edit)
-                attribut = Attribut(private, nom_attribut, type_attribut)
-                attributs.append(attribut)
-            elif compteur_separations == 3:
-                if "-" in line:
-                    private = True
-                elif "+" in line:
-                    private = False
-                # ajouter condition / refaire pour si il y a pas un type de retour
-                list_nom_et_type = line.split(":")
-                nom_pre_edit = list_nom_et_type[0]
-                retour_pre_edit = list_nom_et_type[1]
-                nom_methode = returnAlpha(nom_pre_edit)
-                type_retour = returnAlpha(retour_pre_edit)
-                methode = Methode(private, nom_methode, type_retour)
-                methodes.append(methode)
-            else:
-                break
+        # ici je cree un objet aClass ayant un nom, une liste de methodes et une liste d'attributs
+        # Les attributs on un nom, une securite et un type
+        # Les methodes on un nom, une securite et PEUVENT avoir un type de retour
+        my_class = aClass(umlUnformat(self.uml_diagram))
         attributs_text = ""
-        for atribu in attributs:
-            if atribu.private:
+        for atribu in my_class.getAttibuts():
+            if atribu.isPrivate():
                 attributs_text += f"    self.__{atribu.nom} = ''\n    "
             else:
                 attributs_text += f"    self.{atribu.nom} = ''\n    "
         methode_text = ""
-        for method in methodes:
-            methode_text += f"def {method.nom}(self):\n    " \
-                            f"    {method.retour}_result = ''\n    " \
-                            f"    return string"
-        class_body = f"class {nom_de_classe}:\n" \
-                f"    def __init__(self):\n" \
-                f"    {attributs_text}\n" \
-                f"\n" \
-                f"    {methode_text}"
+        for method in my_class.methods:
+            if method.retour == "":
+                methode_text += f"def {method.nom}(self):\n    " \
+                                f"    pass\n\n    "
+            else:
+                methode_text += f"def {method.nom}(self):\n    " \
+                                f"    {method.retour}_result = ''\n    " \
+                                f"    return string\n\n    "
+        class_body = f"class {my_class.name}:\n" \
+                     f"    def __init__(self):\n" \
+                     f"    {attributs_text}\n" \
+                     f"\n" \
+                     f"    {methode_text}"
 
         return class_body
 
